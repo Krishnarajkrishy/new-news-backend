@@ -23,7 +23,7 @@ app.use("/api/news", newsRoutes);
 
 
 
-cron.schedule("0 * * * *", async () => {
+cron.schedule("* * * * *", async () => {
   console.log("Fetching News....");
   await fetchNewsAndSendEmails();
 });
