@@ -22,7 +22,6 @@ const fetchNewsFromAPI = async (category) => {
         apiKey: process.env.NEWS_API_KEY,
       },
     });
-    console.log(`News fetched for ${category}:`, response.data.articles.length);
     return response.data.articles || [];
   } catch (err) {
     console.error("Error fetching news:", err);
